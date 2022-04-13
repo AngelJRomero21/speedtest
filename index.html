@@ -154,7 +154,7 @@ function startStop(){
 		initUI();
 	}else{
 		//test is not running, begin
-		w=new Worker('test.js');
+		w=new Worker('/speedtest/test.js');
 		w.postMessage('start {"url_dl": "garbage.dat", "url_ul": "empty", "url_ping": "empty", "url_getIp": "ip"}')
 		I("startStopBtn").className="running";
 		w.onmessage=function(e){
